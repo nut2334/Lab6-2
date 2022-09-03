@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function cal() {
+                let num1 = Number(document.querySelector("#num1").value);
+                let num2 = Number(document.querySelector("#num2").value);
+                let o = Number(document.querySelector("#math").value);
+                let sum
+                if(o==1){
+                    sum = num1 + num2;
+                }
+                else if(o==2){
+                    sum = num1 - num2;
+                }
+                else if(o==3){
+                    sum = num1 * num2;
+                }
+                else{
+                    sum = num1 / num2;
+                }
+                document.getElementById("sum").value = sum;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="number" id="num1"/>
+            <select id="math">
+                <option value="1">+</option>
+                <option value="2">-</option>
+                <option value="3">*</option>
+                <option value="4">/</option>
+            </select>
+            <input type="number" id="num2"/> =
+            <input type="number" id="sum"/>
+            <input type="button" value="Compute" onclick="cal()"/>
+        </form>
+    </body>
+</html>
